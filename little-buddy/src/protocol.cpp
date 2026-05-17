@@ -48,6 +48,13 @@ static uint8_t splitMsg(const char *msg, const char *linePtrs[]) {
   return n;
 }
 
+/** done 状态：英文 id 或 MCP 预设「任务圆满完成」→ 叮咚 */
+static bool isDoneMsg(const char *msg) {
+  if (!msg)
+    return false;
+  return strcmp(msg, "done") == 0 || strcmp(msg, "任务圆满完成") == 0;
+}
+
 bool protocolHandleLine(const char *line) {
   if (!line || line[0] != '{')
     return false;
@@ -73,7 +80,7 @@ bool protocolHandleLine(const char *line) {
   const char *stamp = doc["datetime"];
   DisplayStyle st = styleFromDoc(doc);
   displayLines(linePtrs, n, st, emoji, stamp);
-  audioRequestChime();
+  audioRequestChime(isDoneMsg(msg) ? AUDIO_CHIME_DINGDONG : AUDIO_CHIME_BEEP);
 
   if (emoji && emoji[0])
     Serial.printf("[show] emoji=%s ", emoji);

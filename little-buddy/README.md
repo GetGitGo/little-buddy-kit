@@ -52,7 +52,7 @@ pio run -t erase && pio run -t upload
 
 背景 **`bg` 固定黑色**，JSON 不支持改背景。
 
-有效 `msg` 解析成功后播放双音提示音（`audio.cpp`）。
+有效 `msg` 解析成功后播放提示音（`audio.cpp`）：默认短促「滴」；`msg` 为 `done` 或 `任务圆满完成` 时为「叮咚」。
 
 ## emoji（70 个）
 
