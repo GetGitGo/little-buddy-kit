@@ -1,0 +1,22 @@
+[project]
+name = "littlebuddy-mcp-server"
+version = "0.2.0"
+description = "MCP server + BLE daemon for M5 little-buddy (low-latency)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "bleak>=0.22.0",
+]
+
+[project.scripts]
+littlebuddy-mcp = "littlebuddy_mcp.server:main"
+littlebuddy-daemon = "littlebuddy_mcp.daemon:main"
+littlebuddy-service = "littlebuddy_mcp.service:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["littlebuddy_mcp*"]

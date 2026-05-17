@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh beforeSubmitPrompt",
+        "timeout": 20
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh afterAgentResponse",
+        "timeout": 20
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh preToolUse",
+        "timeout": 20
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh postToolUse",
+        "timeout": 20
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh postToolUseFailure",
+        "timeout": 20
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh subagentStart",
+        "timeout": 20
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh subagentStop",
+        "timeout": 20
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh beforeShellExecution",
+        "timeout": 20
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh afterShellExecution",
+        "timeout": 20
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh beforeMCPExecution",
+        "timeout": 20
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh afterMCPExecution",
+        "timeout": 20
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh beforeReadFile",
+        "timeout": 20
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh afterFileEdit",
+        "timeout": 20
+      }
+    ],
+    "preCompact": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh preCompact",
+        "timeout": 20
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/littlebuddy_hook.sh stop",
+        "timeout": 20
+      }
+    ]
+  }
+}

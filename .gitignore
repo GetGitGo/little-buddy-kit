@@ -1,0 +1,11 @@
+.littlebuddy-mcp/
+**/.pio/
+**/.last_device
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
+*.egg-info/
+.DS_Store
+.cursor/mcp.json

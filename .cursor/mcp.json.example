@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "littlebuddy": {
+      "command": "littlebuddy-mcp",
+      "args": [],
+      "env": {
+        "LITTLEBUDDY_MCP_DIR": "/path/to/little-buddy-kit/.littlebuddy-mcp"
+      }
+    }
+  }
+}
