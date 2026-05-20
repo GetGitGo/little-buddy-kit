@@ -123,7 +123,7 @@ python talk.py --list-emoji
 **daemon 运行中**时使用，与 Cursor 共用同一条 BLE，不抢连接。
 
 ```bash
-export LITTLEBUDDY_MCP_DIR=/path/to/myesp/.littlebuddy-mcp   # 与 mcp.json 一致
+export LITTLEBUDDY_MCP_DIR=/path/to/little-buddy-kit/.littlebuddy-mcp   # 与 mcp.json 一致
 littlebuddy-service start   # 若未运行
 
 cd talk2littlebuddy
@@ -179,10 +179,10 @@ $LITTLEBUDDY_MCP_DIR/
   hook.log         # Cursor hook 调试日志（若启用 hooks）
 ```
 
-示例（myesp 仓库）：
+示例（`little-buddy-kit` 仓库）：
 
 ```bash
-export LITTLEBUDDY_MCP_DIR=/Users/you/myesp/.littlebuddy-mcp
+export LITTLEBUDDY_MCP_DIR=/Users/you/little-buddy-kit/.littlebuddy-mcp
 mkdir -p "$LITTLEBUDDY_MCP_DIR"
 ```
 
@@ -209,7 +209,7 @@ tail -f "$LITTLEBUDDY_MCP_DIR/daemon.log"
 
 ### 3.4 Cursor MCP 配置
 
-编辑 `myesp/.cursor/mcp.json`（路径按本机 Python 修改）：
+编辑 `little-buddy-kit/.cursor/mcp.json`（路径按本机 Python 修改）：
 
 ```json
 {
@@ -218,7 +218,7 @@ tail -f "$LITTLEBUDDY_MCP_DIR/daemon.log"
       "command": "/path/to/python3.10/bin/littlebuddy-mcp",
       "args": [],
       "env": {
-        "LITTLEBUDDY_MCP_DIR": "/path/to/myesp/.littlebuddy-mcp"
+        "LITTLEBUDDY_MCP_DIR": "/path/to/little-buddy-kit/.littlebuddy-mcp"
       }
     }
   }
@@ -262,10 +262,10 @@ tail -f "$LITTLEBUDDY_MCP_DIR/daemon.log"
 
 ### 3.6 Cursor Hooks（自动上屏）
 
-已配置在 `myesp/.cursor/hooks.json`：提交提示、工具调用、编辑文件、`stop` 等事件 → 对应预设状态。  
+已配置在 `little-buddy-kit/.cursor/hooks.json`：提交提示、工具调用、编辑文件、`stop` 等事件 → 对应预设状态。  
 Hook 脚本：`.cursor/hooks/littlebuddy_hook.sh`（后台进程，不阻塞 Agent）。
 
-要求：**daemon 在跑**且 `LITTLEBUDDY_MCP_DIR` 与 MCP 一致（hook 默认指向 `myesp/.littlebuddy-mcp`）。
+要求：**daemon 在跑**且 `LITTLEBUDDY_MCP_DIR` 与 MCP 一致（未设置时 hook 默认用 `little-buddy-kit/.littlebuddy-mcp`）。
 
 Hook 调试日志：`$LITTLEBUDDY_MCP_DIR/hook.log`。
 

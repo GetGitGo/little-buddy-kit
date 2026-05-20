@@ -63,7 +63,7 @@ daemon 连接时：
 
 ## 2. Cursor MCP 配置
 
-`myesp/.cursor/mcp.json` 示例（路径按本机修改）：
+`little-buddy-kit/.cursor/mcp.json` 示例（路径按本机修改）：
 
 ```json
 {
@@ -72,7 +72,7 @@ daemon 连接时：
       "command": "/path/to/bin/littlebuddy-mcp",
       "args": [],
       "env": {
-        "LITTLEBUDDY_MCP_DIR": "/path/to/myesp/.littlebuddy-mcp"
+        "LITTLEBUDDY_MCP_DIR": "/path/to/little-buddy-kit/.littlebuddy-mcp"
       }
     }
   }
@@ -83,7 +83,7 @@ daemon 连接时：
 
 ```json
 "env": {
-  "LITTLEBUDDY_MCP_DIR": "/path/to/myesp/.littlebuddy-mcp",
+  "LITTLEBUDDY_MCP_DIR": "/path/to/little-buddy-kit/.littlebuddy-mcp",
   "LITTLEBUDDY_START_SCAN": "1"
 }
 ```

@@ -74,6 +74,6 @@ pio run -t upload
 cd ../talk2littlebuddy && python talk.py --msg "测试" --emoji brain --size 4
 
 # daemon 已连接时（推荐）
-export LITTLEBUDDY_MCP_DIR=/path/to/myesp/.littlebuddy-mcp
+export LITTLEBUDDY_MCP_DIR=/path/to/little-buddy-kit/.littlebuddy-mcp
 python talk2bledaemon.py --msg "测试" --emoji brain
 ```

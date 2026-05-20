@@ -5,7 +5,7 @@
 与 talk.py 类似，但走 daemon 已有连接；daemon 运行时可与 Cursor/hook 并存。
 
 环境：
-  export LITTLEBUDDY_MCP_DIR=/path/to/.littlebuddy-mcp   # 默认同仓库 myesp/.littlebuddy-mcp
+  export LITTLEBUDDY_MCP_DIR=/path/to/little-buddy-kit/.littlebuddy-mcp   # 与 install.md / mcp.json 一致
 
 示例：
   littlebuddy-service start
